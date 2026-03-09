@@ -10,15 +10,15 @@ The **ID3 algorithm** builds a decision tree by selecting the attribute that pro
 
 Entropy is calculated using the formula:
 
-[
-Entropy = -\frac{p}{p+n} \log_2 \frac{p}{p+n} - \frac{n}{p+n} \log_2 \frac{n}{p+n}
-]
+
+<img width="554" height="79" alt="image" src="https://github.com/user-attachments/assets/7d82b1af-3cf0-4c4f-9cc0-2a9d7810586d" />
+
 
 Information gain is calculated as:
 
-[
-Information\ Gain = Entropy(S) - I(Attribute)
-]
+
+<img width="554" height="63" alt="image" src="https://github.com/user-attachments/assets/77e51f0e-0521-4799-b6fb-3c608392d9ca" />
+
 
 Steps in ID3 algorithm:
 
@@ -38,9 +38,11 @@ CART uses the **Gini Index** as the splitting criterion to measure impurity in c
 
 The Gini index is defined as:
 
-[
-GiniIndex = 1 - \sum (P_i)^2
-]
+
+
+<img width="310" height="63" alt="image" src="https://github.com/user-attachments/assets/84579d4a-224f-47c9-9553-0b27a5f8da5b" />
+
+
 
 where (P_i) represents the probability of each class.
 
