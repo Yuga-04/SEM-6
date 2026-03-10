@@ -136,7 +136,9 @@ ELU improves ReLU by introducing **smooth negative outputs**, which helps reduce
 * Smooth negative values
 * Faster convergence in deep networks
 
-📌 **Diagram in PDF:** Page **23**. 
+<img width="558" height="385" alt="image" src="https://github.com/user-attachments/assets/024148f4-49ae-4597-8c22-4a2f3b7e8c91" />
+
+
 
 ---
 
@@ -152,8 +154,6 @@ ELU improves ReLU by introducing **smooth negative outputs**, which helps reduce
 
 Sigmoid and tanh compress input values into small ranges, causing **very small gradients**, which leads to the **vanishing gradient problem** during backpropagation. 
 
-
-<img width="558" height="385" alt="image" src="https://github.com/user-attachments/assets/024148f4-49ae-4597-8c22-4a2f3b7e8c91" />
 
 
 ---
