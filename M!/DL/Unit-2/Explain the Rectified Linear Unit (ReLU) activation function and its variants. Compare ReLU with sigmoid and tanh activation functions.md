@@ -1,7 +1,3 @@
-Here is a **clean exam-ready 15-mark answer format (2 pages writing style)** based strictly on your **PDF**, including **what diagram you should draw in the exam**.
-
----
-
 # Rectified Linear Unit (ReLU) Activation Function and its Variants
 
 ## 1. Introduction
