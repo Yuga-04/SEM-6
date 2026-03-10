@@ -71,17 +71,11 @@ Different optimization algorithms are used to improve training efficiency and co
 
 Stochastic Gradient Descent updates model parameters using the gradient computed from **one training example or a small batch at a time**.
 
-### Update Rule
 
-[
-\theta = \theta - \eta \nabla J(\theta)
-]
 
-Where
+<img width="651" height="269" alt="image" src="https://github.com/user-attachments/assets/1cbc2753-6144-414a-9155-02327e15cec7" />
 
-* ( \theta ) = model parameters
-* ( \eta ) = learning rate
-* ( \nabla J(\theta) ) = gradient of the loss function
+
 
 ### Advantages
 
