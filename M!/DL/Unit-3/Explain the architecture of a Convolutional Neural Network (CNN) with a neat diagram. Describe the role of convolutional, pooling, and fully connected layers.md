@@ -1,7 +1,3 @@
-Here is a **clean exam-writing format for 15 marks** (short sentences + easy diagram to draw in paper) based **only on your PDF**.
-
----
-
 # Architecture of Convolutional Neural Network (CNN)
 
 A **Convolutional Neural Network (CNN)** is a type of deep learning model used for **image recognition, image processing and classification**. CNN automatically extracts important features from input images using filters (kernels). 
