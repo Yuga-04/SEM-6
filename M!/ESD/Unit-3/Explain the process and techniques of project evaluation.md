@@ -159,7 +159,8 @@ PI = Present Value of Future Cash Inflows / Initial Investment
 * PI < 1 → Reject the project
 
 
-![Uploading image.png…]()
+<img width="1133" height="757" alt="image" src="https://github.com/user-attachments/assets/a9a42b73-87ec-48fe-b7e5-3b6bb0ca3992" />
+
 
 
 ---
