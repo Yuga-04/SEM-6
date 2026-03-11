@@ -1,11 +1,3 @@
-### Explain the Process and Techniques of Project Evaluation (15 Marks)
-
-**Project evaluation** is the process of analyzing a proposed project to determine whether it is **financially viable and worth investing in**. It helps entrepreneurs or organizations select projects that provide the **maximum return with acceptable risk**.
-
-According to the PDF, project evaluation mainly uses **capital budgeting techniques** to assess investment decisions. 
-
----
-
 # 1. Process of Project Evaluation
 
 The project evaluation process involves the following steps:
