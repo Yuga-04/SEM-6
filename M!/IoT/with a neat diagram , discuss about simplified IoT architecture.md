@@ -11,25 +11,6 @@ These stacks work together to enable communication between devices, processing o
 
 ---
 
-# Diagram: Simplified IoT Architecture
-
-*(Diagram is shown in the PDF)*
-**Page Number for the Diagram: Page 10** 
-
-The diagram on page 10 shows the **Core IoT Functional Stack** and the **IoT Data Management and Compute Stack** aligned side by side with **security applied across all layers**.
-
-Structure shown in the diagram:
-
-```
-Core IoT Functional Stack        IoT Data Management & Compute Stack
-
-Applications                     Cloud
-Communications Network           Fog
-Things (Sensors & Actuators)     Edge
-```
-
----
-
 # 1. Core IoT Functional Stack
 
 The **Core IoT Functional Stack** consists of three main layers that define the basic functioning of an IoT system.
