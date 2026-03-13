@@ -1,5 +1,3 @@
----
-
 # Explain with Three-Tier Architecture Diagram and Give the Steps for Design and Construction of Data Warehouse (15 Marks)
 
 ## 1. Three-Tier Data Warehouse Architecture
