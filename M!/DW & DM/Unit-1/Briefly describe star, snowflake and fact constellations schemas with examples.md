@@ -1,5 +1,3 @@
-<img width="577" height="251" alt="image" src="https://github.com/user-attachments/assets/ba8b08cd-74ba-41ee-9cda-ef214b17bee9" />Here is the **15-mark answer taken from your PDF notes**.
-
 ---
 
 # Briefly Describe Star, Snowflake and Fact Constellation Schemas with Examples (15 Marks)
