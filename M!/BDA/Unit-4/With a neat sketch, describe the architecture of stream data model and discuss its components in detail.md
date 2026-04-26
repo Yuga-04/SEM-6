@@ -187,15 +187,6 @@ The stream data model architecture is designed to efficiently process **high-spe
 
 ---
 
-## 🧠 Exam Tip
-
-👉 Draw the diagram neatly + label:
-
-* Stream source
-* Processing engine
-* Working store
-* Archival storage
-* Query system
 
 👉 That alone can fetch **2–3 extra marks**
 
