@@ -17,8 +17,8 @@
 9. Knowledge of **👉 MARKET** helps entrepreneurs understand customer needs and market trends
 
 
-
-
+---
+---
 
 
 1. The business environment consists of **👉 INTERNAL** and external factors influencing a firm.
@@ -40,7 +40,8 @@
 9. A stable business environment encourages **👉 BUSINESS** investment.
 
 
-
+---
+---
 
 
 1. Business ideas can be generated from **👉 CUSTOMER** needs and market gaps. 
@@ -62,7 +63,8 @@
 9. Projects are evaluated based on profitability, risk, and **👉 GROWTH** potential. 
 
 
-
+---
+---
 
 
 1. Mobilization of finance involves arranging **👉 FUNDS** for business activities. 
@@ -84,7 +86,8 @@
 9. Leadership plays a key role in motivating **👉 EMPLOYEES**. 
 
 
-
+---
+---
 
 
 
