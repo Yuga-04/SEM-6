@@ -1,336 +1,224 @@
 <img width="725" height="304" alt="image" src="https://github.com/user-attachments/assets/f64ae59c-7863-44ee-8bce-6e1eb4ef0bea" />
-# Find All Frequent Item Sets Using FP-Growth Algorithm
+# ✅ FP-Growth Frequent Itemsets – 15 Marks Answer
 
-## Minimum Support Count = 2
+## Given Transactions
 
----
+<table>
+<tr>
+<th>TID</th>
+<th>Items</th>
+</tr>
 
-# Given Transaction Database
+<tr>
+<td>T1</td>
+<td>Pen, Notebook, Eraser</td>
+</tr>
 
-| Transaction ID | Items                 |
-| -------------- | --------------------- |
-| T1             | Pen, Notebook, Eraser |
-| T2             | Pen, Notebook         |
-| T3             | Notebook, Eraser      |
-| T4             | Pen, Marker           |
-| T5             | Pen, Notebook, Eraser |
+<tr>
+<td>T2</td>
+<td>Pen, Notebook</td>
+</tr>
 
----
+<tr>
+<td>T3</td>
+<td>Notebook, Eraser</td>
+</tr>
 
-# Step 1: Find Support Count of Each Item
+<tr>
+<td>T4</td>
+<td>Pen, Marker</td>
+</tr>
 
-Count the occurrence of each item in all transactions.
+<tr>
+<td>T5</td>
+<td>Pen, Notebook, Eraser</td>
+</tr>
+</table>
 
-| Item     | Support Count |
-| -------- | ------------- |
-| Pen      | 4             |
-| Notebook | 4             |
-| Eraser   | 3             |
-| Marker   | 1             |
-
-Minimum Support Count:
-
-```text id="1ikj2s"
-Min_Sup = 2
-```
-
-Remove infrequent items.
-
-Since Marker has support count 1, it is removed.
-
----
-
-# Frequent 1-Itemsets
-
-```text id="8i4ksn"
-L<sub>1</sub> =
-{
-{Pen},
-{Notebook},
-{Eraser}
-}
-```
+<p><b>Minimum support count = 2</b></p>
 
 ---
 
-# Step 2: Arrange Items in Descending Order of Support
+# Step 1: Count Support of Each Item
 
-Order frequent items according to support count.
+<table>
+<tr>
+<th>Item</th>
+<th>Support Count</th>
+</tr>
 
-```text id="v7s1qd"
-Pen = 4
-Notebook = 4
-Eraser = 3
-```
+<tr>
+<td>Pen</td>
+<td>4</td>
+</tr>
 
-Ordered list:
+<tr>
+<td>Notebook</td>
+<td>4</td>
+</tr>
 
-```text id="4m5j3a"
-L = {Pen, Notebook, Eraser}
-```
+<tr>
+<td>Eraser</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>Marker</td>
+<td>1</td>
+</tr>
+</table>
+
+<p>Since minimum support = 2, Marker is removed.</p>
+
+<p><b>Frequent 1-itemsets:</b></p>
+
+<p>{Pen} = 4</p>
+
+<p>{Notebook} = 4</p>
+
+<p>{Eraser} = 3</p>
+
+---
+
+# Step 2: Arrange Items in Descending Order
+
+<p><b>Order:</b></p>
+
+<p>Pen, Notebook, Eraser</p>
+
+<p>After removing Marker:</p>
+
+<table>
+<tr>
+<th>TID</th>
+<th>Ordered Items</th>
+</tr>
+
+<tr>
+<td>T1</td>
+<td>Pen, Notebook, Eraser</td>
+</tr>
+
+<tr>
+<td>T2</td>
+<td>Pen, Notebook</td>
+</tr>
+
+<tr>
+<td>T3</td>
+<td>Notebook, Eraser</td>
+</tr>
+
+<tr>
+<td>T4</td>
+<td>Pen</td>
+</tr>
+
+<tr>
+<td>T5</td>
+<td>Pen, Notebook, Eraser</td>
+</tr>
+</table>
 
 ---
 
 # Step 3: Construct FP-Tree
 
-Create root node:
-
-```text id="1h4g7m"
-NULL
-```
-
----
-
-# Insert Transaction T1
-
-Transaction:
-
-```text id="f8w2ka"
-{Pen, Notebook, Eraser}
-```
-
-FP-Tree:
-
-```text id="9p2sjd"
-NULL
- └── Pen:1
-      └── Notebook:1
-           └── Eraser:1
-```
+<pre>
+null
+├── Pen:4
+│   └── Notebook:3
+│       └── Eraser:2
+└── Notebook:1
+    └── Eraser:1
+</pre>
 
 ---
 
-# Insert Transaction T2
+# Step 4: Find Frequent Itemsets
 
-Transaction:
+## 1-Itemsets
 
-```text id="n7x5de"
-{Pen, Notebook}
-```
+<table>
+<tr>
+<th>Itemset</th>
+<th>Support</th>
+</tr>
 
-Common prefix exists.
+<tr>
+<td>{Pen}</td>
+<td>4</td>
+</tr>
 
-Increase counts.
+<tr>
+<td>{Notebook}</td>
+<td>4</td>
+</tr>
 
-```text id="4g2kqm"
-NULL
- └── Pen:2
-      └── Notebook:2
-           └── Eraser:1
-```
-
----
-
-# Insert Transaction T3
-
-Transaction:
-
-```text id="1s8vna"
-{Notebook, Eraser}
-```
-
-New branch created.
-
-```text id="k3d9wo"
-NULL
- ├── Pen:2
- │     └── Notebook:2
- │            └── Eraser:1
- │
- └── Notebook:1
-        └── Eraser:1
-```
+<tr>
+<td>{Eraser}</td>
+<td>3</td>
+</tr>
+</table>
 
 ---
 
-# Insert Transaction T4
+## 2-Itemsets
 
-Transaction:
+<table>
+<tr>
+<th>Itemset</th>
+<th>Support</th>
+</tr>
 
-```text id="x5q2nr"
-{Pen}
-```
+<tr>
+<td>{Pen, Notebook}</td>
+<td>3</td>
+</tr>
 
-Increase Pen count.
+<tr>
+<td>{Pen, Eraser}</td>
+<td>2</td>
+</tr>
 
-```text id="7g3mfp"
-NULL
- ├── Pen:3
- │     └── Notebook:2
- │            └── Eraser:1
- │
- └── Notebook:1
-        └── Eraser:1
-```
-
----
-
-# Insert Transaction T5
-
-Transaction:
-
-```text id="m6k1zp"
-{Pen, Notebook, Eraser}
-```
-
-Increase counts along common path.
-
-Final FP-Tree:
-
-```text id="5v8qtn"
-NULL
- ├── Pen:4
- │     └── Notebook:3
- │            └── Eraser:2
- │
- └── Notebook:1
-        └── Eraser:1
-```
+<tr>
+<td>{Notebook, Eraser}</td>
+<td>3</td>
+</tr>
+</table>
 
 ---
 
-# Step 4: Mine Frequent Patterns
+## 3-Itemsets
 
-Mining starts from least frequent item.
+<table>
+<tr>
+<th>Itemset</th>
+<th>Support</th>
+</tr>
 
----
-
-# Conditional Pattern Base for Eraser
-
-Eraser appears in:
-
-1.
-
-```text id="4x2wje"
-Pen → Notebook → Eraser : 2
-```
-
-2.
-
-```text id="9q7kdm"
-Notebook → Eraser : 1
-```
-
-Conditional Pattern Base:
-
-```text id="r5k8av"
-{
-{Pen, Notebook : 2},
-{Notebook : 1}
-}
-```
+<tr>
+<td>{Pen, Notebook, Eraser}</td>
+<td>2</td>
+</tr>
+</table>
 
 ---
 
-# Frequent Patterns with Eraser
+# ✅ Final Frequent Itemsets
 
-| Frequent Pattern        | Support Count |
-| ----------------------- | ------------- |
-| {Eraser}                | 3             |
-| {Notebook, Eraser}      | 3             |
-| {Pen, Eraser}           | 2             |
-| {Pen, Notebook, Eraser} | 2             |
+<p>{Pen}, {Notebook}, {Eraser}</p>
 
----
+<p>{Pen, Notebook}, {Pen, Eraser}, {Notebook, Eraser}</p>
 
-# Conditional Pattern Base for Notebook
-
-Notebook appears in:
-
-```text id="7n4qsd"
-Pen → Notebook : 3
-Notebook : 1
-```
-
-Conditional Pattern Base:
-
-```text id="2j8wfa"
-{
-{Pen : 3}
-}
-```
-
----
-
-# Frequent Patterns with Notebook
-
-| Frequent Pattern | Support Count |
-| ---------------- | ------------- |
-| {Notebook}       | 4             |
-| {Pen, Notebook}  | 3             |
-
----
-
-# Conditional Pattern Base for Pen
-
-Pen appears alone with count 4.
-
-Frequent Pattern:
-
-| Frequent Pattern | Support Count |
-| ---------------- | ------------- |
-| {Pen}            | 4             |
-
----
-
-# Final Frequent Itemsets
-
-## Frequent 1-Itemsets
-
-| Itemset    | Support Count |
-| ---------- | ------------- |
-| {Pen}      | 4             |
-| {Notebook} | 4             |
-| {Eraser}   | 3             |
-
----
-
-## Frequent 2-Itemsets
-
-| Itemset            | Support Count |
-| ------------------ | ------------- |
-| {Pen, Notebook}    | 3             |
-| {Notebook, Eraser} | 3             |
-| {Pen, Eraser}      | 2             |
-
----
-
-## Frequent 3-Itemsets
-
-| Itemset                 | Support Count |
-| ----------------------- | ------------- |
-| {Pen, Notebook, Eraser} | 2             |
-
----
-
-# All Frequent Itemsets
-
-```text id="2m7xqa"
-{
-{Pen},
-{Notebook},
-{Eraser},
-{Pen, Notebook},
-{Notebook, Eraser},
-{Pen, Eraser},
-{Pen, Notebook, Eraser}
-}
-```
+<p>{Pen, Notebook, Eraser}</p>
 
 ---
 
 # Conclusion
 
-Using the FP-Growth algorithm, the transaction database is compressed into an FP-tree and frequent itemsets are mined without candidate generation. With minimum support count 2, the frequent itemsets obtained are:
-
-```text id="6w3jke"
-{Pen},
-{Notebook},
-{Eraser},
-{Pen, Notebook},
-{Notebook, Eraser},
-{Pen, Eraser},
-{Pen, Notebook, Eraser}
-```
-
-The FP-Growth algorithm efficiently discovers frequent patterns with fewer database scans and better performance compared to Apriori.
+<p>
+Using FP-Growth with minimum support count 2, all frequent itemsets are found.
+Marker is removed because its support count is only 1.
+The frequent itemsets are Pen, Notebook, Eraser and their valid combinations.
+</p>
