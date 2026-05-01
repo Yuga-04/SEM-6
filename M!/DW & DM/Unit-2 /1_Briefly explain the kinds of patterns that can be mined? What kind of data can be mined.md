@@ -57,6 +57,8 @@ Clustering groups data objects into clusters where **objects in the same cluster
 Example: Grouping customers based on purchasing behavior.
 
 📄 Diagram: **Customer cluster diagram – Page 47 (Figure 1.11)**.
+<img width="747" height="598" alt="image" src="https://github.com/user-attachments/assets/880d585b-2904-407a-93cf-92af7f97055b" />
+
 
 ---
 
